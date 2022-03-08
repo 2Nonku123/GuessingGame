@@ -1,43 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guessing Game</title>
+
+  <!-- // addition of bootstrap --> 
+  <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-   
 
+
+
+
+
+  <section class="jumbotron text-center">
     <div class="container">
 
-        <div>
-            <H1 style="text-align: center;">Guessing Game</H1>
-            <h3 style="text-align: center;">Enter a number between 1 and 100</h3>
-            <input type="number"class= "guessNumber" placeholder="Enter a number">
-            <br>
-            <br>
-            <br>
+      <h1 class="jumbotron-heading">Guessing Game</h1>
 
-            <input type="button" value="Guess" class="btnGuess">
-            <input type="button" value="Refresh" class="btnRefresh">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card" style="width: 100%;">
+            <div class="card-body">
+
+
+
+
+              <form id="frm1" name="frm1" action="index.html">
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Enter a number between 1 and 100</label>
+                  <input type="text" class="form-control" id="number" name="number" placeholder="000">
+                </div>
+
+                <p></p>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="button" class="btn btn-primary btn-block" onclick="myGuess()" value="Guess">
+                  </div>
+
+                  <div class="col-md-6">
+                    <input type="button" class="btn btn-secondary btn-block" onclick="refreshPage()" value="Refresh">
+                  </div>
+                </div>
+              </form>
+
+              <br>
+
+              <!-- show javascript results starts here -->
+              <div id="demo">
+              </div>
+              <!-- show javascript results ends here -->
+
+            </div>
+          </div>
         </div>
-       
-     
+      </div>
 
-    <div class="message">
-     Guess Output:
-    </div>
 
+      <div class="row">
+        <div class="col-md-12">
     <!-- <div class="counter">
        Chances:
     </div>
     <div class="points">
         Score:
-       </div> -->
+      </div> -->
+
+    </div>
+  </div>
 
 </div>
+</section>
 </body>
-<script src="index.js"></script>
+<script src="js/index.js"></script>
 </html>
+
+
